@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clang-14.0 build active file",
+            "command": "/usr/bin/clang-14",
+            "args": [
+                "-g",
+                "${file}","${workspaceFolder}/hr_time.c",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lSDL2_image",                
+                "-lSDL2"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
